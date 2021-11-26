@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 malinka
+=======
+toto je pokus
+>>>>>>> 703ea7824024de43da39c0bbdd2119577a02307a
