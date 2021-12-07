@@ -9,18 +9,11 @@ services:
      - MYSQL_USER=user2
      - MYSQL_PASSWORD=passwd2
      - MYSQL_ROOT_PASSWORD=secret
-    networks: 
-     - tac
-
 
   adminer:
     image: adminer
     restart: always
     ports:
       - 8090:8080
-    networks: 
-      - tac
-
-networks: 
-  tac:
-
+    depends_on:
+          - db
