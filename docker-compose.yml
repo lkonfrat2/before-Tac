@@ -1,0 +1,26 @@
+version: "3"
+services:
+
+  db:
+    image: mysql
+    restart: always
+    environment:
+     - MYSQL_DATABASE=db
+     - MYSQL_USER=user2
+     - MYSQL_PASSWORD=passwd2
+     - MYSQL_ROOT_PASSWORD=secret
+    networks: 
+     - tac
+
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8090:8080
+    networks: 
+      - tac
+
+networks: 
+  tac:
+
